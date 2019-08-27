@@ -27,12 +27,10 @@ class Triangle
 
   def kind
     validation
-    if (@triangle_sides.uniq).length == 1
-      return :equilateral  
-    elsif @triangle_sides.uniq.count == 2 
-      return :isosceles 
-    elsif @triangle_sides.uniq.length == 3 
-      return :scalene   
+    return :equilateral if (@triangle_sides.uniq).length == 1
+    return :isosceles if @triangle_sides.uniq.count == 2 
+    return :scalene if @triangle_sides.uniq.length == 3 
+        
     end
   end
       
